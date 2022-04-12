@@ -1,0 +1,94 @@
+<nav class="main-nav">
+  <div class="main-nav__wrapper">
+    <div class="main-nav__user-nav">
+      <a class="main-nav__link @@if (context.index) { main-nav__link--active }" @@if (!context.index) { href="index.html" }>
+        <span class="main-nav__icon">
+          <svg width="17" height="18" aria-hidden="true" focusable="false">
+            <use xlink:href="#icon-home"></use>
+          </svg>
+        </span>
+        Главная
+      </a>
+      <a class="main-nav__link" href="#">
+        <span class="main-nav__icon">
+          <svg width="17" height="17" aria-hidden="true" focusable="false">
+            <use xlink:href="#icon-user"></use>
+          </svg>
+        </span>
+        Константин Константиновский
+      </a>
+    </div>
+    <ul class="main-nav__list">
+      <li class="main-nav__item">
+        <a class="main-nav__link @@if (context.activeNavLink === 0) { main-nav__link--active }" @@if (context.activeNavLink !== 0) { href="#" }>
+          <span class="main-nav__icon">
+            <svg width="24" height="24" aria-hidden="true" focusable="false">
+              <use xlink:href="#icon-calendar"></use>
+            </svg>
+          </span>
+          Мероприятия
+        </a>
+      </li>
+      <li class="main-nav__item">
+        <a class="main-nav__link @@if (context.activeNavLink === 1) { main-nav__link--active }" @@if (context.activeNavLink !== 1) { href="#" }>
+          <span class="main-nav__icon">
+            <svg width="24" height="24" aria-hidden="true" focusable="false">
+              <use xlink:href="#icon-people"></use>
+            </svg>
+          </span>
+          Сотрудники
+        </a>
+      </li>
+      <li class="main-nav__item">
+        <a class="main-nav__link @@if (context.activeNavLink === 2) { main-nav__link--active }" @@if (context.activeNavLink !== 2) { href="#" }>
+          <span class="main-nav__icon">
+            <svg width="24" height="24" aria-hidden="true" focusable="false">
+              <use xlink:href="#icon-notes"></use>
+            </svg>
+          </span>
+          Заметки
+        </a>
+      </li>
+      <li class="main-nav__item">
+        <a class="main-nav__link @@if (context.activeNavLink === 3) { main-nav__link--active }" @@if (context.activeNavLink !== 3) { href="#" }>
+          <span class="main-nav__icon">
+            <svg width="24" height="24" aria-hidden="true" focusable="false">
+              <use xlink:href="#icon-pie-chart"></use>
+            </svg>
+          </span>
+          Статистика
+        </a>
+      </li>
+      <li class="main-nav__item">
+        <a class="main-nav__link @@if (context.activeNavLink === 4) { main-nav__link--active }" @@if (context.activeNavLink !== 4) { href="#" }>
+          <span class="main-nav__icon">
+            <svg width="24" height="24" aria-hidden="true" focusable="false">
+              <use xlink:href="#icon-clipboard"></use>
+            </svg>
+          </span>
+          Удобрения
+        </a>
+      </li>
+      <li class="main-nav__item">
+        <a class="main-nav__link @@if (context.activeNavLink === 5) { main-nav__link--active }" @@if (context.activeNavLink !== 5) { href="#" }>
+          <span class="main-nav__icon">
+            <svg width="20" height="20" aria-hidden="true" focusable="false">
+              <use xlink:href="#icon-weather-rain"></use>
+            </svg>
+          </span>
+          Погода
+        </a>
+      </li>
+      <li class="main-nav__item">
+        <a class="main-nav__link @@if (context.activeNavLink === 6) { main-nav__link--active }" @@if (context.activeNavLink !== 6) { href="#" }>
+          <span class="main-nav__icon">
+            <svg width="24" height="24" aria-hidden="true" focusable="false">
+              <use xlink:href="#icon-bullhorn"></use>
+            </svg>
+          </span>
+          Организации
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
