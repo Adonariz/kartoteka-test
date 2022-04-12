@@ -10,12 +10,22 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
 
-$color-neon-blue:                   #2c39f2;
-$color-torch-red:                   #ff1553;
+$color-turquoise-blue:              #43e8ff;
+$color-midnight-express:            #1f2339; // фон навигации
+$color-gulf-blue:                   #383e57; // фон виджетов
+$color-east-bay:                    #4d5474; // фон основной
+$color-blue-zodiac:                 #3e4459; // фон инпутов
+$color-mischka:                     #a1a6be; // цвет текста
 
 // Gradient
 
-$black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+$blue-to-right:                     linear-gradient(141.65deg, #43e9ff 22.09%, #00abab 67.48%), #646981;
+$violet-to-right:                   linear-gradient(124.04deg, rgba(182, 26, 255, 0.5) -6.27%, rgba(0, 26, 255, 0.5) 98.36%), #656cff;
+$torquoise-radial:                  radial-gradient(133.33% 2508.35% at -4.59% -10%, #32e6ff 0%, rgba(0, 255, 209, 0.81) 100%), #43e8ff; // активные ссылки навигации
+
+// Shadow
+
+$bs-widget-default:                 7px 7px 8px rgba(0, 0, 0, 0.15);
 
 // Typography
 // ---------------------------------
@@ -23,11 +33,7 @@ $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0
 // переменная используемая в html для подключения скейлинга
 $fz-default:                        16px;
 
-// у некоторых шрифтов в ios возникают проблемы с символом рубля
-// https://www.artlebedev.ru/kovodstvo/sections/159/#13
-$ff-rouble:                         "Rouble", "Arial", sans-serif;
-
-$ff-placeholder:                    "Placeholder", "Arial", sans-serif;
+$ff-open-sans:                      "Open Sans", "Arial", sans-serif;
 
 // Animation
 // ---------------------------------
