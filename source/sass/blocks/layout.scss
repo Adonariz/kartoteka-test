@@ -1,0 +1,18 @@
+.layout {
+  &__row {
+    display: flex;
+    flex-wrap: nowrap;
+
+    width: 100%;
+
+    &:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+    &:not(:last-of-type) {
+      margin-right: 30px;
+    }
+  }
+}

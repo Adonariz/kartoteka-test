@@ -1,0 +1,22 @@
+.widget {
+  display: flex;
+  flex-grow: 1;
+
+  min-height: 230px;
+
+  background-color: $color-gulf-blue;
+  box-shadow: $bs-widget-default;
+  border-radius: 18px;
+
+  &--sm {
+    max-width: 340px;
+  }
+
+  &--m {
+    max-width: 525px;
+  }
+
+  &--lg {
+    max-width: 710px;
+  }
+}

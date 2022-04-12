@@ -19,8 +19,40 @@
     })
 
     <main>
-
       <div class="container">
+        <section class="main-screen">
+          <h1 class="visually-hidden">Главная страница</h1>
+          <header class="main-screen__header screen-header">
+            <h2 class="screen-header__title">ИП Васильев</h2>
+            <a href="#" class="screen-header__button-icon screen-header__button-icon--add">
+              <svg width="28" height="28" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-plus"></use>
+              </svg>
+              Добавить
+            </a>
+            <a href="#" class="screen-header__button-icon screen-header__button-icon--settings">
+              <svg width="32" height="32" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-gear"></use>
+              </svg>
+              Настройки
+            </a>
+          </header>
+          <div class="layout">
+            <div class="layout__row">
+              <div class="layout__item widget widget--sm"></div>
+              <div class="layout__item widget widget--sm"></div>
+              <div class="layout__item widget widget--sm"></div>
+            </div>
+            <div class="layout__row">
+              <div class="layout__item widget widget--lg"></div>
+              <div class="layout__item widget widget--sm"></div>
+            </div>
+            <div class="layout__row">
+              <div class="layout__item widget widget--m"></div>
+              <div class="layout__item widget widget--m"></div>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   </div>
