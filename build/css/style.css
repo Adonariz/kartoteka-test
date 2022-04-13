@@ -719,6 +719,7 @@ button,
   flex-direction: column;
   width: 100%;
   height: 100%;
+  padding-bottom: 4em;
 }
 
 .main-screen__header {
@@ -1091,16 +1092,16 @@ button,
   margin-top: 1.4em;
 }
 
-.widget--pie-chart .widget__list-item {
+.widget--pie-chart .widget__legend-wrapper {
   padding-left: 2.1em;
   position: relative;
 }
 
-.widget--pie-chart .widget__list-item:not(:last-child) {
+.widget--pie-chart .widget__legend-wrapper:not(:last-child) {
   margin-bottom: 1.4em;
 }
 
-.widget--pie-chart .widget__list-item::before {
+.widget--pie-chart .widget__legend-wrapper::before {
   content: "";
   display: block;
   width: 14px;
@@ -1111,18 +1112,79 @@ button,
   border-radius: 5px;
 }
 
-.widget--pie-chart .widget__list-item:nth-of-type(1)::before {
+.widget--pie-chart .widget__legend-wrapper:nth-of-type(1)::before {
   background: -o-linear-gradient(308.35deg, #43e9ff 22.09%, #00abab 67.48%), #646981;
   background: linear-gradient(141.65deg, #43e9ff 22.09%, #00abab 67.48%), #646981;
 }
 
-.widget--pie-chart .widget__list-item:nth-of-type(2)::before {
+.widget--pie-chart .widget__legend-wrapper:nth-of-type(2)::before {
   background: -o-linear-gradient(325.96deg, rgba(182, 26, 255, 0.5) -6.27%, rgba(0, 26, 255, 0.5) 98.36%), #656cff;
   background: linear-gradient(124.04deg, rgba(182, 26, 255, 0.5) -6.27%, rgba(0, 26, 255, 0.5) 98.36%), #656cff;
 }
 
 .widget--pie-chart .widget__legend {
   margin-bottom: 0.7em;
+}
+
+.widget--chart .widget__heading-wrapper {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.widget--chart .widget__star {
+  margin-left: 1em;
+}
+
+.widget--chart .widget__content-wrapper {
+  margin-bottom: -20px;
+}
+
+.widget--chart .widget__content-wrapper img {
+  width: 312px;
+  height: 270px;
+  margin-top: -3.1em;
+  margin-left: auto;
+  margin-right: -0.8em;
+}
+
+.widget--chart .widget__company {
+  margin-top: 1.2em;
+  margin-bottom: 1.4em;
+}
+
+.widget--chart .widget__legend-wrapper {
+  padding-left: 2.1em;
+  position: relative;
+}
+
+.widget--chart .widget__legend-wrapper:not(:last-child) {
+  margin-bottom: 1.4em;
+}
+
+.widget--chart .widget__legend-wrapper::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 0.2em;
+  left: 0;
+  border-radius: 5px;
+}
+
+.widget--chart .widget__legend-wrapper:nth-of-type(1)::before {
+  background: -o-linear-gradient(308.35deg, #43e9ff 22.09%, #00abab 67.48%), #646981;
+  background: linear-gradient(141.65deg, #43e9ff 22.09%, #00abab 67.48%), #646981;
+}
+
+.widget--chart .widget__legend {
+  margin-bottom: 0.7em;
+}
+
+.widget--chart .widget__link {
+  margin-top: auto;
+  margin-bottom: 1.8em;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {

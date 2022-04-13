@@ -298,7 +298,7 @@
     margin-top: 1.4em;
   }
 
-  .widget__list-item {
+  .widget__legend-wrapper {
     padding-left: 2.1em;
     position: relative;
 
@@ -333,5 +333,71 @@
 
   .widget__legend {
     margin-bottom: 0.7em;
+  }
+}
+
+.widget--chart {
+  .widget__heading-wrapper {
+    align-items: flex-end;
+  }
+
+  .widget__star {
+    margin-left: 1em;
+  }
+
+  .widget__content-wrapper {
+    margin-bottom: -20px;
+
+    & img {
+      width: 312px;
+      height: 270px;
+
+      margin-top: -3.1em;
+      margin-left: auto;
+      margin-right: -0.8em;
+    }
+  }
+
+  .widget__company {
+    margin-top: 1.2em;
+    margin-bottom: 1.4em;
+  }
+
+  .widget__legend-wrapper {
+    padding-left: 2.1em;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 1.4em;
+    }
+
+    &::before {
+      content: "";
+
+      display: block;
+
+      width: 14px;
+      height: 14px;
+
+      position: absolute;
+
+      top: 0.2em;
+      left: 0;
+
+      border-radius: 5px;
+    }
+
+    &:nth-of-type(1)::before {
+      background: $blue-to-right;
+    }
+  }
+
+  .widget__legend {
+    margin-bottom: 0.7em;
+  }
+
+  .widget__link {
+    margin-top: auto;
+    margin-bottom: 1.8em;
   }
 }
