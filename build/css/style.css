@@ -846,6 +846,12 @@ button,
   flex-direction: column;
 }
 
+.widget__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .widget__title {
   font-size: 16px;
   line-height: 26px;
@@ -859,8 +865,27 @@ button,
   margin: 0;
 }
 
-.widget__text--grey {
+.widget__text--second {
   color: #a1a6be;
+}
+
+.widget__text--accent {
+  color: #43e8ff;
+}
+
+.widget__link {
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.widget__link:hover,
+.widget__link:focus {
+  opacity: 0.7;
+}
+
+.widget__link:active {
+  opacity: 0.5;
 }
 
 .widget--activity .widget__wrapper {
@@ -971,6 +996,54 @@ button,
   margin-left: auto;
   margin-top: -2.1em;
   margin-right: 1.6em;
+}
+
+.widget--employees .widget__contacts {
+  font-size: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: auto;
+}
+
+.widget--employees .widget__contacts a:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+.widget--employees .widget__contacts a svg {
+  fill: #ffffff;
+  -webkit-transition: fill 0.3s ease;
+  -o-transition: fill 0.3s ease;
+  transition: fill 0.3s ease;
+}
+
+.widget--employees .widget__contacts a:hover svg,
+.widget--employees .widget__contacts a:focus svg {
+  fill: #43e8ff;
+}
+
+.widget--employees .widget__list {
+  margin-top: 1.7em;
+}
+
+.widget--employees .widget__list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.widget--employees .widget__list-item:not(:last-child) {
+  margin-bottom: 0.7em;
+}
+
+.widget--employees .widget__link {
+  margin-top: auto;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
