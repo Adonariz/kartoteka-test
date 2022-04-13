@@ -8,6 +8,8 @@
   box-shadow: $bs-widget-default;
   border-radius: 18px;
 
+  color: $color-default-white;
+
   &--sm {
     max-width: 340px;
   }
@@ -18,5 +20,58 @@
 
   &--lg {
     max-width: 710px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    padding: 20px;
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 700;
+
+    margin: 0;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 19px;
+
+    margin: 0;
+
+    &--grey {
+      color: $color-mischka;
+    }
+  }
+}
+
+.widget--activity {
+  .widget__wrapper {
+    padding-right: 25px;
+
+    & img {
+      margin-left: auto;
+    }
+  }
+}
+
+.widget--region {
+  .widget__wrapper {
+    & .widget__subtitle {
+      margin-top: 0.5em;
+    }
+
+    & img {
+      margin-left: auto;
+      margin-top: -1.1em;
+      width: 282px;
+      margin-right: 0.1em;
+    }
   }
 }
