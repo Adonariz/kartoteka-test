@@ -600,7 +600,7 @@ button,
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
   padding-left: 40px;
-  padding-right: 80px;
+  padding-right: 40px;
 }
 
 .main-nav {
@@ -873,6 +873,10 @@ button,
   color: #43e8ff;
 }
 
+.widget__text--bold {
+  font-weight: 700;
+}
+
 .widget__link {
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
@@ -1044,6 +1048,81 @@ button,
 
 .widget--employees .widget__link {
   margin-top: auto;
+}
+
+.widget--pie-chart .widget__heading-wrapper {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.widget--pie-chart .widget__filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 600;
+  margin-left: auto;
+  margin-right: 0.7em;
+  padding-bottom: 3px;
+  cursor: pointer;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.widget--pie-chart .widget__filter svg {
+  margin-left: 0.7em;
+}
+
+.widget--pie-chart .widget__filter:hover,
+.widget--pie-chart .widget__filter:focus {
+  opacity: 0.7;
+}
+
+.widget--pie-chart .widget__content-wrapper img {
+  margin-left: auto;
+  margin-right: 3.3em;
+}
+
+.widget--pie-chart .widget__list {
+  margin-top: 1.4em;
+}
+
+.widget--pie-chart .widget__list-item {
+  padding-left: 2.1em;
+  position: relative;
+}
+
+.widget--pie-chart .widget__list-item:not(:last-child) {
+  margin-bottom: 1.4em;
+}
+
+.widget--pie-chart .widget__list-item::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 0.2em;
+  left: 0;
+  border-radius: 5px;
+}
+
+.widget--pie-chart .widget__list-item:nth-of-type(1)::before {
+  background: -o-linear-gradient(308.35deg, #43e9ff 22.09%, #00abab 67.48%), #646981;
+  background: linear-gradient(141.65deg, #43e9ff 22.09%, #00abab 67.48%), #646981;
+}
+
+.widget--pie-chart .widget__list-item:nth-of-type(2)::before {
+  background: -o-linear-gradient(325.96deg, rgba(182, 26, 255, 0.5) -6.27%, rgba(0, 26, 255, 0.5) 98.36%), #656cff;
+  background: linear-gradient(124.04deg, rgba(182, 26, 255, 0.5) -6.27%, rgba(0, 26, 255, 0.5) 98.36%), #656cff;
+}
+
+.widget--pie-chart .widget__legend {
+  margin-bottom: 0.7em;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
