@@ -31,6 +31,16 @@
     padding: 20px;
   }
 
+  &__row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__title {
     font-size: 16px;
     line-height: 26px;
@@ -72,6 +82,52 @@
       margin-top: -1.1em;
       width: 282px;
       margin-right: 0.1em;
+    }
+  }
+}
+
+.widget--weather {
+  .widget__row {
+    align-items: flex-end;
+
+    &:not(:last-child) {
+      margin-bottom: 0.7em;
+    }
+  }
+
+  .widget__date {
+    margin-bottom: 1.4em;
+    margin-right: 2.8em;
+  }
+
+  .widget__temp {
+    font-weight: 300;
+    font-size: 80px;
+    line-height: 109px;
+    letter-spacing: -0.05em;
+
+    display: flex;
+
+    & span {
+      font-size: 36px;
+      line-height: 49px;
+
+      padding-top: 0.4em;
+      padding-left: 0.1em;
+    }
+  }
+
+  .widget__pressure {
+    margin-right: 5em;
+
+    & span:not(:last-child) {
+      margin-bottom: 0.3em;
+    }
+  }
+
+  .widget__condition {
+    & span:not(:last-child) {
+      margin-bottom: 0.3em;
     }
   }
 }

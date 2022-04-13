@@ -826,6 +826,26 @@ button,
   padding: 20px;
 }
 
+.widget__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.widget__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
 .widget__title {
   font-size: 16px;
   line-height: 26px;
@@ -860,6 +880,50 @@ button,
   margin-top: -1.1em;
   width: 282px;
   margin-right: 0.1em;
+}
+
+.widget--weather .widget__row {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.widget--weather .widget__row:not(:last-child) {
+  margin-bottom: 0.7em;
+}
+
+.widget--weather .widget__date {
+  margin-bottom: 1.4em;
+  margin-right: 2.8em;
+}
+
+.widget--weather .widget__temp {
+  font-weight: 300;
+  font-size: 80px;
+  line-height: 109px;
+  letter-spacing: -0.05em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.widget--weather .widget__temp span {
+  font-size: 36px;
+  line-height: 49px;
+  padding-top: 0.4em;
+  padding-left: 0.1em;
+}
+
+.widget--weather .widget__pressure {
+  margin-right: 5em;
+}
+
+.widget--weather .widget__pressure span:not(:last-child) {
+  margin-bottom: 0.3em;
+}
+
+.widget--weather .widget__condition span:not(:last-child) {
+  margin-bottom: 0.3em;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
