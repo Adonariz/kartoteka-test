@@ -927,6 +927,7 @@ button,
 }
 
 .widget--report .widget__content-wrapper {
+  height: 100%;
   padding-top: 0.6em;
 }
 
@@ -965,6 +966,8 @@ button,
 }
 
 .widget--report .widget__content-wrapper img {
+  width: 167px;
+  height: 184px;
   margin-left: auto;
   margin-top: -2.1em;
   margin-right: 1.6em;
