@@ -926,6 +926,50 @@ button,
   margin-bottom: 0.3em;
 }
 
+.widget--report .widget__content-wrapper {
+  padding-top: 0.6em;
+}
+
+.widget--report .widget__content-wrapper table {
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 400;
+  width: 100%;
+  max-width: 374px;
+  margin-left: -0.8em;
+  text-align: left;
+  vertical-align: middle;
+  border-collapse: collapse;
+}
+
+.widget--report .widget__content-wrapper table th {
+  font-weight: 400;
+  padding-left: 0.8em;
+}
+
+.widget--report .widget__content-wrapper table tr td {
+  padding-left: 9px;
+  border: 1px solid #1f2339;
+}
+
+.widget--report .widget__content-wrapper table tr td:first-child {
+  border-left: none;
+}
+
+.widget--report .widget__content-wrapper table tr td:last-child {
+  border-right: none;
+}
+
+.widget--report .widget__content-wrapper table tr:last-child td {
+  border-bottom: none;
+}
+
+.widget--report .widget__content-wrapper img {
+  margin-left: auto;
+  margin-top: -2.1em;
+  margin-right: 1.6em;
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
