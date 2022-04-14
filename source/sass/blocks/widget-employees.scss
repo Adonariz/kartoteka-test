@@ -1,0 +1,41 @@
+.widget-employees {
+  &__contacts {
+    font-size: 0;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    & a {
+      &:not(:last-of-type) {
+        margin-right: 20px;
+      }
+
+      & svg {
+        fill: $color-default-white;
+        transition: fill $trans-default;
+      }
+
+      &:hover svg,
+      &:focus svg {
+        fill: $color-turquoise-blue;
+      }
+    }
+  }
+
+  &__list {
+    margin-top: 1.7em;
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: flex-start;
+
+    &:not(:last-child) {
+      margin-bottom: 0.7em;
+    }
+  }
+
+  &__link {
+    margin-top: auto;
+  }
+}

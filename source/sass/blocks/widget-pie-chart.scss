@@ -1,0 +1,77 @@
+.widget-pie-chart {
+  &__heading-wrapper {
+    align-items: center;
+  }
+
+  &__filter {
+    display: flex;
+    align-items: center;
+
+    font-weight: 600;
+
+    margin-left: auto;
+    margin-right: 0.7em;
+
+    padding-bottom: 3px;
+
+    cursor: pointer;
+    transition: opacity $trans-default;
+
+    & svg {
+      margin-left: 0.7em;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+  }
+
+  &__content-wrapper {
+    & img {
+      margin-left: auto;
+      margin-right: 3.3em;
+    }
+  }
+
+  &__list {
+    margin-top: 1.4em;
+  }
+
+  &__list-item {
+    padding-left: 2.1em;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 1.4em;
+    }
+
+    &::before {
+      content: "";
+
+      display: block;
+
+      width: 14px;
+      height: 14px;
+
+      position: absolute;
+
+      top: 0.2em;
+      left: 0;
+
+      border-radius: 5px;
+    }
+
+    &:nth-of-type(1)::before {
+      background: $blue-to-right;
+    }
+
+    &:nth-of-type(2)::before {
+      background: $violet-to-right;
+    }
+  }
+
+  &__legend {
+    margin-bottom: 0.7em;
+  }
+}

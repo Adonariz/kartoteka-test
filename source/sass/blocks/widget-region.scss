@@ -1,0 +1,15 @@
+.widget-region {
+  &__subtitle {
+    margin-top: 0.5em;
+  }
+
+  &__wrapper {
+    & img {
+      width: 282px;
+
+      margin-left: auto;
+      margin-top: -1.1em;
+      margin-right: 0.1em;
+    }
+  }
+}
