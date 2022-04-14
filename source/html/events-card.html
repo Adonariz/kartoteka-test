@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  @@include("source/html/base/head.html")
+  <title>Картотека — Мероприятия</title>
+
+</head>
+<body>
+
+  <div style="display: none;">
+    @@include("build/img/sprite_auto.svg")
+  </div>
+
+  <div class="wrapper">
+
+    @@include("source/html/base/main-nav.html", {
+      "index": false,
+      "activeNavLink": 0
+    })
+
+    <main>
+      <div class="container">
+        <section class="main-screen">
+          <h1 class="visually-hidden">Мероприятия</h1>
+
+          <header class="main-screen__header screen-header">
+            <h2 class="screen-header__title">Карточка мероприятия</h2>
+            <a href="#" class="screen-header__button-icon screen-header__button-icon--add">
+              <svg width="28" height="28" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-plus"></use>
+              </svg>
+              Добавить
+            </a>
+            <a href="#" class="screen-header__button-icon screen-header__button-icon--settings">
+              <svg width="32" height="32" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-gear"></use>
+              </svg>
+              Настройки
+            </a>
+          </header>
+
+          <div class="layout">
+
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+</html>
