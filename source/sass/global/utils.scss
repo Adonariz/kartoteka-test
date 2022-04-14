@@ -52,6 +52,16 @@
     line-height: 22px;
     font-weight: 700;
   }
+
+  &--notification {
+    font-weight: 300;
+    color: $color-wewak;
+  }
+
+  &--small {
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 
 .list-reset {

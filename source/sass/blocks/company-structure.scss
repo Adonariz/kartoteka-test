@@ -1,0 +1,144 @@
+.company-structure {
+  &__wrapper {
+    padding-bottom: 0;
+  }
+
+  &__header {
+    cursor: pointer;
+    position: relative;
+
+    & svg {
+      fill: $color-default-white;
+
+      position: absolute;
+      top: 0.4em;
+      right: 0;
+    }
+
+    &--open {
+      & svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__file {
+    font-size: 0;
+
+    position: absolute;
+    top: 36px;
+    right: 0;
+
+    & svg {
+      transform: rotate(0deg);
+    }
+  }
+
+  &__list {
+    margin-top: 1.8em;
+  }
+
+  &__list-item {
+    padding-top: 1.6em;
+    padding-bottom: 1.5em;
+
+    position: relative;
+
+    &::before {
+      content: "";
+
+      display: block;
+
+      width: calc(100% + 40px); // для компенсации ширины паддингов контейнера
+      height: 1px;
+
+      background-color: $color-midnight-express;
+
+      position: absolute;
+      top: 0;
+      left: -20px; // на ширину левого паддинга контейнера
+    }
+  }
+
+  &__executive {
+    padding-top: 1.4em;
+  }
+
+  &__company-info {
+    margin-top: 2em;
+
+    & p {
+      padding-left: 1.6em;
+      position: relative;
+
+      &:not(:last-child) {
+        margin-bottom: 0.8em;
+      }
+
+      &::before {
+        content: "";
+
+        display: block;
+
+        width: 17px;
+        height: 17px;
+
+        background-repeat: no-repeat;
+        background-position: center;
+
+        position: absolute;
+        top: -2px;
+        left: -1px;
+      }
+    }
+  }
+
+  &__address {
+    &::before {
+      background-image: url("../../img/sprite/icon-geo.svg");
+    }
+  }
+
+  &__personnel {
+    &::before {
+      width: 16px;
+      height: 16px;
+
+      background-image: url("../../img/sprite/icon-person.svg");
+    }
+  }
+
+  &__previous-names {
+    margin-top: 2em;
+  }
+
+  &__previous-names-list {
+    margin-top: 0.7em;
+  }
+
+  &__previous-names-item {
+    padding-left: 1.6em;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 0.9em;
+    }
+
+    &::before {
+      content: "";
+
+      display: block;
+
+      width: 16px;
+      height: 16px;
+
+      background-image: url("../../img/sprite/icon-signature.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+
+      position: absolute;
+      top: 1px;
+      left: 0;
+    }
+  }
+}
