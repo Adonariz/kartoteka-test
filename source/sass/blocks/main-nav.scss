@@ -10,7 +10,7 @@
 
     padding-top: 31px;
     padding-left: 16px;
-    padding-right: 16px;
+    padding-right: 10px;
   }
 
   &__user-nav {
@@ -44,6 +44,26 @@
     padding: 0;
 
     list-style: none;
+
+    & .main-nav__link--active {
+      padding-left: 6px;
+      padding-top: 9px;
+      padding-bottom: 9px;
+
+      margin-top: -9px;
+      margin-bottom: -9px;
+      margin-left: -6px;
+
+      color: $color-midnight-express;
+      background: $torquoise-radial;
+      border-radius: 10px;
+
+      pointer-events: none;
+
+      & svg {
+        fill: $color-midnight-express;
+      }
+    }
   }
 
   &__item {

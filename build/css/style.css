@@ -692,7 +692,7 @@ button,
   flex-direction: column;
   padding-top: 31px;
   padding-left: 16px;
-  padding-right: 16px;
+  padding-right: 10px;
 }
 
 .main-nav__user-nav {
@@ -730,6 +730,24 @@ button,
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.main-nav__list .main-nav__link--active {
+  padding-left: 6px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  margin-top: -9px;
+  margin-bottom: -9px;
+  margin-left: -6px;
+  color: #1f2339;
+  background: -o-radial-gradient(-4.59% -10%, 133.33% 2508.35%, #32e6ff 0%, rgba(0, 255, 209, 0.81) 100%), #43e8ff;
+  background: radial-gradient(133.33% 2508.35% at -4.59% -10%, #32e6ff 0%, rgba(0, 255, 209, 0.81) 100%), #43e8ff;
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+.main-nav__list .main-nav__link--active svg {
+  fill: #1f2339;
 }
 
 .main-nav__item:not(:last-of-type) {
