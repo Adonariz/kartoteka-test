@@ -933,6 +933,8 @@ button,
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   width: 100%;
   background-color: #383e57;
   -webkit-box-shadow: 7px 7px 8px rgba(0, 0, 0, 0.15);
@@ -1387,3 +1389,12 @@ button,
     color: $color-default-white;
   }
 } */
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .main-nav__link {
+    /* IE10+ CSS */
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+}
