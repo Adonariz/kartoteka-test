@@ -184,7 +184,11 @@
         <section class="main-screen">
           <h1 class="visually-hidden">Мероприятия</h1>
           <header class="main-screen__header screen-header">
-            <h2 class="screen-header__title">Карточка мероприятия</h2>
+            <div class="screen-header__title-wrapper row">
+              <h2 class="screen-header__title margin-reset">Карточка мероприятия</h2>
+              <span class="screen-header__new">Обновлено</span>
+            </div>
+            <a href="#" class="button button--white screen-header__button">Материалы проверки</a>
             <a href="#" class="screen-header__button-icon screen-header__button-icon--add">
               <svg width="28" height="28" aria-hidden="true" focusable="false">
                 <use xlink:href="#icon-plus"></use>
@@ -199,6 +203,13 @@
             </a>
           </header>
           <div class="layout">
+            <div class="layout__row row">
+              <div class="widget widget--m layout__item">Элемент 1</div>
+              <div class="layout__column column">
+                <div class="widget widget--m layout__item">Элемент 2</div>
+                <div class="widget widget--m layout__item">Элемент 3</div>
+              </div>
+            </div>
           </div>
         </section>
       </div>

@@ -6,6 +6,11 @@
 
   width: 100%;
 
+  &__title-wrapper {
+    margin-right: auto;
+    align-items: flex-end;
+  }
+
   &__title {
     font-size: 20px;
     line-height: 27px;
@@ -13,10 +18,20 @@
 
     color: $color-default-white;
 
-    margin: 0;
-    margin-right: auto;
-
     padding: 0;
+  }
+
+  &__new {
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-turquoise-blue;
+
+    margin-left: 1.1em;
+  }
+
+  &__button {
+    margin-left: auto;
+    margin-right: 1.5em;
   }
 
   &__button-icon {

@@ -5,11 +5,23 @@
     &:not(:last-of-type) {
       margin-bottom: 30px;
     }
-  }
 
-  &__item {
-    &:not(:last-of-type) {
-      margin-right: 30px;
+    .layout__item {
+      &:not(:last-of-type) {
+        margin-right: 30px;
+      }
     }
   }
+
+  &__column {
+    width: 100%;
+
+    .layout__item {
+      &:not(:last-of-type) {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
 }
