@@ -559,6 +559,25 @@ button,
   appearance: none;
 }
 
+/* Firefox: */
+
+@-moz-document url-prefix()  {
+  select {
+    text-indent: -2px;
+  }
+}
+
+/* Edge: */
+
+@supports (-ms-ime-align: auto) {
+  select {
+    width: calc(100% + 4px);
+    margin-left: -4px;
+  }
+}
+
+/* IE11: */
+
 .wrapper {
   position: relative;
   display: -webkit-box;
@@ -924,6 +943,19 @@ button,
 .button--dark {
   color: #43e8ff;
   background-color: #1f2339;
+  -webkit-transition: color 0.3s ease, background-color 0.3s ease;
+  -o-transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.button--dark:hover,
+.button--dark:focus {
+  color: #1f2339;
+  background-color: #ffffff;
+}
+
+.button--dark:active {
+  opacity: 0.5;
 }
 
 .widget {
@@ -1425,12 +1457,130 @@ button,
   background-color: #ffffff;
 }
 
+.review-form__wrapper {
+  padding: 25px 30px;
+}
+
+.review-form__comment-wrapper {
+  margin-bottom: 2em;
+}
+
+.review-form__form-wrapper {
+  padding-top: 1.6em;
+}
+
+.review-form__inputs-wrapper {
+  padding-top: 1.6em;
+  position: relative;
+}
+
+.review-form__inputs-wrapper::before {
+  content: "";
+  display: block;
+  width: calc(100% + 60px);
+  height: 1px;
+  background-color: #1f2339;
+  position: absolute;
+  top: 0;
+  left: -30px;
+}
+
+.review-form textarea,
+.review-form input,
+.review-form select {
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 300;
+  color: #c4c4c4;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 7px 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: #3e4459;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.review-form textarea:hover,
+.review-form textarea:focus,
+.review-form input:hover,
+.review-form input:focus,
+.review-form select:hover,
+.review-form select:focus {
+  color: #ffffff;
+}
+
+.review-form__input-wrapper:not(:first-child) {
+  margin-top: 1em;
+}
+
+.review-form__input-wrapper input#date {
+  max-width: 194px;
+  padding-left: 18px;
+}
+
+.review-form__select-wrapper {
+  max-width: 303px;
+  position: relative;
+}
+
+.review-form__select-wrapper::after {
+  content: "";
+  display: block;
+  width: 9px;
+  height: 9px;
+  background-image: url("../../img/svg/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  bottom: 13px;
+  right: 22px;
+}
+
+.review-form label {
+  margin-bottom: 0.4em;
+}
+
+.review-form textarea {
+  resize: none;
+  height: 56px;
+}
+
+.review-form select {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.review-form select option {
+  padding: 0;
+}
+
+.review-form__submit {
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
     color: $color-default-white;
   }
 } */
+
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+  select {
+    width: calc(100% + 4px);
+    margin-left: -3px;
+  }
+}
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .main-nav__link {

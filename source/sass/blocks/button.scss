@@ -17,5 +17,17 @@
   &--dark {
     color: $color-turquoise-blue;
     background-color: $color-midnight-express;
+
+    transition: color $trans-default, background-color $trans-default ;
+
+    &:hover,
+    &:focus {
+      color: $color-midnight-express;
+      background-color: $color-default-white;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
   }
 }

@@ -198,7 +198,7 @@
               <h2 class="screen-header__title margin-reset">Карточка мероприятия</h2>
               <span class="screen-header__new">Обновлено</span>
             </div>
-            <a href="#" class="button button--white screen-header__button">Материалы проверки</a>
+            <a href="#" class="button button--white screen-header__button hover-opacity">Материалы проверки</a>
             <a href="#" class="screen-header__button-icon screen-header__button-icon--add">
               <svg width="28" height="28" aria-hidden="true" focusable="false">
                 <use xlink:href="#icon-plus"></use>
@@ -304,22 +304,66 @@
                       <li class="review__list-item row">
                         <p class="review__text text text--bold margin-reset">Справка проверки</p>
                         <div class="review__dec-line"></div>
-                        <a href="#" class="review__button button button--dark hover-opacity">Сформировать</a>
+                        <a href="#" class="review__button button button--dark">Сформировать</a>
                       </li>
                       <li class="review__list-item row">
                         <p class="review__text text text--bold margin-reset">Акт проверки</p>
                         <div class="review__dec-line"></div>
-                        <a href="#" class="review__button button button--dark hover-opacity">Сформировать</a>
+                        <a href="#" class="review__button button button--dark">Сформировать</a>
                       </li>
                       <li class="review__list-item row">
                         <p class="review__text text text--bold margin-reset">Схема проверки</p>
                         <div class="review__dec-line"></div>
-                        <a href="#" class="review__button button button--dark hover-opacity">Сформировать</a>
+                        <a href="#" class="review__button button button--dark">Сформировать</a>
                       </li>
                     </ul>
                   </div>
                 </div>
-                <div class="widget widget--m layout__item">Элемент 3</div>
+                <div class="widget widget--m layout__item review-form">
+                  <div class="widget__wrapper review-form__wrapper">
+                    <form>
+                      <div class="column">
+                        <div class="review-form__comment-wrapper column">
+                          <label for="comment" class="text">Решение о проведении поверки</label>
+                          <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Введите текст"></textarea>
+                        </div>
+                        <div class="review-form__inputs-wrapper column">
+                          <div class="review-form__input-wrapper column">
+                            <label for="company" class="text">Организация</label>
+                            <input type="text" name="company" id="company" value="ООО “РесерчХолд”">
+                          </div>
+                          <div class="review-form__input-wrapper review-form__select-wrapper column">
+                            <label for="check-type" class="text">Вид проверки</label>
+                            <select name="check-type" id="check-type">
+                              <option value="planned" selected>Плановая</option>
+                            </select>
+                          </div>
+                          <div class="review-form__input-wrapper review-form__select-wrapper column">
+                            <label for="check-form" class="text">Форма проверки</label>
+                            <select name="check-form" id="check-form">
+                              <option value="on-site" selected>Выездная</option>
+                            </select>
+                          </div>
+                          <div class="review-form__input-wrapper review-form__select-wrapper column">
+                            <label for="check-method" class="text">Метод проверки</label>
+                            <select name="check-method" id="check-method">
+                              <option value="factual" selected>Фактическая</option>
+                            </select>
+                          </div>
+                          <div class="review-form__input-wrapper column">
+                            <label for="date" class="text">Сроки проведения проверки</label>
+                            <input type="text" name="date" id="date" value="02.08.2020 - 05.08.2020">
+                          </div>
+                          <div class="review-form__input-wrapper column">
+                            <label for="location" class="text">Место проведения проверки</label>
+                            <input type="text" name="location" id="location" value="г. Москва, Ленинский пр-т 178, к4">
+                          </div>
+                        </div>
+                        <button type="submit" class="button button--dark review-form__submit">Написать</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

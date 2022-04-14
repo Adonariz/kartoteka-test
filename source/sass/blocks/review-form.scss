@@ -1,0 +1,120 @@
+.review-form {
+  &__wrapper {
+    padding: 25px 30px;
+  }
+
+  &__comment-wrapper {
+    margin-bottom: 2em;
+  }
+
+  &__form-wrapper {
+    padding-top: 1.6em;
+  }
+
+  &__inputs-wrapper {
+    padding-top: 1.6em;
+    position: relative;
+
+    &::before {
+      content: "";
+
+      display: block;
+
+      width: calc(100% + 60px); // с учетом ширины паддингов контейнера
+      height: 1px;
+
+      background-color: $color-midnight-express;
+
+      position: absolute;
+      top: 0;
+      left: -30px; // ширина левого паддинга контейнера
+    }
+  }
+
+  & textarea,
+  & input,
+  & select {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 300;
+
+    color: $color-silver;
+
+    box-sizing: border-box;
+
+    width: 100%;
+
+    padding: 7px 10px;
+
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: $color-blue-zodiac;
+
+    transition: color $trans-default;
+
+    &:hover,
+    &:focus {
+      color: $color-default-white;
+    }
+  }
+
+  &__input-wrapper {
+    &:not(:first-child) {
+      margin-top: 1em;
+    }
+
+    & input#date {
+      max-width: 194px;
+      padding-left: 18px;
+    }
+  }
+
+  &__select-wrapper {
+    max-width: 303px;
+
+    position: relative;
+
+    &::after {
+      content: "";
+
+      display: block;
+      width: 9px;
+      height: 9px;
+
+      background-image: url("../../img/svg/arrow.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+
+      position: absolute;
+      bottom: 13px;
+      right: 22px;
+    }
+  }
+
+  & label {
+    margin-bottom: 0.4em;
+  }
+
+  & textarea {
+    resize: none;
+    height: 56px;
+  }
+
+  & select {
+    cursor: pointer;
+    appearance: none;
+
+    & option {
+      padding: 0;
+    }
+  }
+
+  &__submit {
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+
+    cursor: pointer;
+  }
+}

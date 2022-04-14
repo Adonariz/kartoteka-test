@@ -127,3 +127,28 @@ button,
 [type="submit"] {
   appearance: none;
 }
+
+// select text-indent removing
+/* Firefox: */
+@-moz-document url-prefix() {
+  select {
+    text-indent: -2px;
+  }
+}
+
+/* Edge: */
+@supports (-ms-ime-align: auto) {
+  select {
+    width: calc(100% + 4px);
+    margin-left: -4px;
+  }
+}
+
+/* IE11: */
+@media screen and (-ms-high-contrast: active),
+screen and (-ms-high-contrast: none) {
+  select {
+    width: calc(100% + 4px);
+    margin-left: -3px;
+  }
+}
