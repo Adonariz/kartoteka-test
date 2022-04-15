@@ -2,15 +2,26 @@
   background-color: $color-midnight-express;
   flex-shrink: 0;
   flex-grow: 1;
+
+  width: 100%;
   max-width: 241px;
+
+  position: relative;
 
   &__wrapper {
     display: flex;
     flex-direction: column;
 
+    width: 100%;
+    max-width: 241px;
+
     padding-top: 31px;
     padding-left: 16px;
     padding-right: 10px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 
   &__user-nav {

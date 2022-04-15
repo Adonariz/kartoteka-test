@@ -708,7 +708,9 @@ button,
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  width: 100%;
   max-width: 241px;
+  position: relative;
 }
 
 .main-nav__wrapper {
@@ -719,9 +721,14 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  width: 100%;
+  max-width: 241px;
   padding-top: 31px;
   padding-left: 16px;
   padding-right: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .main-nav__user-nav {
@@ -877,9 +884,47 @@ button,
   margin-left: 1.1em;
 }
 
+.screen-header__search-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 465px;
+  height: 100%;
+  position: relative;
+}
+
+.screen-header__search-wrapper input {
+  width: 100%;
+  height: 100%;
+  padding-top: 8px;
+  padding-right: 25px;
+  padding-bottom: 9px;
+  padding-left: 16px;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 300;
+  color: #c4c4c4;
+  background: none;
+  background-color: #3e4459;
+  border: none;
+  border-radius: 5px;
+}
+
+.screen-header__search-wrapper svg {
+  position: absolute;
+  top: 8px;
+  right: 13px;
+}
+
 .screen-header__button {
-  margin-left: auto;
-  margin-right: 1.5em;
+  margin-left: 25px;
+}
+
+.screen-header__button-icon-wrapper {
+  margin-left: 23px;
 }
 
 .screen-header__button-icon {
@@ -926,7 +971,7 @@ button,
 }
 
 .button {
-  padding: 0.5em 1.9em;
+  padding: 0.44em 1.9em;
   font-size: 16px;
   line-height: 22px;
   font-weight: 600;
