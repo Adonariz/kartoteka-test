@@ -1832,13 +1832,6 @@ button,
   left: calc(50% - 11px / 2);
 }
 
-/* @media (hover: hover), screen and (min-width: 0\0) {
-  &:hover,
-  &:focus {
-    color: $color-default-white;
-  }
-} */
-
 @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
   select {
     width: calc(100% + 4px);
