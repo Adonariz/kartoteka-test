@@ -376,6 +376,7 @@ template {
   display: none;
 }
 
+
 /**
 * Add the correct display in IE 10.
 */
@@ -389,7 +390,7 @@ template {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -397,7 +398,7 @@ template {
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2"), url(../fonts/OpenSans-SemiBold.woff") format("woff");
+  src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2"), url("../fonts/OpenSans-SemiBold.woff") format("woff");
 }
 
 @font-face {
