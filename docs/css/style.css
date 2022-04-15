@@ -389,7 +389,7 @@ template {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../../fonts/OpenSans-Regular.woff2") format("woff2"), url("../../fonts/OpenSans-Regular.woff") format("woff");
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -397,7 +397,7 @@ template {
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("../../fonts/OpenSans-SemiBold.woff2") format("woff2"), url("../../fonts/OpenSans-SemiBold.woff") format("woff");
+  src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2"), url(../fonts/OpenSans-SemiBold.woff") format("woff");
 }
 
 @font-face {
@@ -405,7 +405,7 @@ template {
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("../../fonts/OpenSans-Bold.woff2") format("woff2"), url("../../fonts/OpenSans-Bold.woff") format("woff");
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
 }
 
 @font-face {
@@ -413,7 +413,7 @@ template {
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url("../../fonts/OpenSans-Light.woff2") format("woff2"), url("../../fonts/OpenSans-Light.woff") format("woff");
+  src: url("../fonts/OpenSans-Light.woff2") format("woff2"), url("../fonts/OpenSans-Light.woff") format("woff");
 }
 
 *,
@@ -1435,13 +1435,13 @@ button,
 }
 
 .company-structure__address::before {
-  background-image: url("../../img/sprite/icon-geo.svg");
+  background-image: url("../img/sprite/icon-geo.svg");
 }
 
 .company-structure__personnel::before {
   width: 16px;
   height: 16px;
-  background-image: url("../../img/sprite/icon-person.svg");
+  background-image: url("../img/sprite/icon-person.svg");
 }
 
 .company-structure__previous-names {
@@ -1466,7 +1466,7 @@ button,
   display: block;
   width: 16px;
   height: 16px;
-  background-image: url("../../img/sprite/icon-signature.svg");
+  background-image: url("../img/sprite/icon-signature.svg");
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
@@ -1592,7 +1592,7 @@ button,
   display: block;
   width: 9px;
   height: 9px;
-  background-image: url("../../img/svg/arrow.svg");
+  background-image: url("../img/svg/arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
@@ -1689,15 +1689,15 @@ button,
 }
 
 .organisations-table__status-icon--low::before {
-  background-image: url("../../img/svg/status-low.svg");
+  background-image: url("../img/svg/status-low.svg");
 }
 
 .organisations-table__status-icon--med::before {
-  background-image: url("../../img/svg/status-med.svg");
+  background-image: url("../img/svg/status-med.svg");
 }
 
 .organisations-table__status-icon--high::before {
-  background-image: url("../../img/svg/status-high.svg");
+  background-image: url("../img/svg/status-high.svg");
 }
 
 .organisations-table table {
