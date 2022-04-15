@@ -1729,7 +1729,7 @@ button,
   width: 401px;
 }
 
-.organisations-table table#edit {
+.organisations-table table col#edit {
   width: 43px;
 }
 
