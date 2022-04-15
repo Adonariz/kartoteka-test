@@ -27,19 +27,21 @@
             <div class="screen-header__title-wrapper row">
               <h2 class="screen-header__title margin-reset">ИП Васильев</h2>
             </div>
-            <div class="screen-header__button-icon-wrapper row">
-              <a href="#" class="screen-header__button-icon screen-header__button-icon--add">
-                <svg width="28" height="28" aria-hidden="true" focusable="false">
-                  <use xlink:href="#icon-plus"></use>
-                </svg>
-                Добавить
-              </a>
-              <a href="#" class="screen-header__button-icon screen-header__button-icon--settings">
-                <svg width="32" height="32" aria-hidden="true" focusable="false">
-                  <use xlink:href="#icon-gear"></use>
-                </svg>
-                Настройки
-              </a>
+            <div class="screen-header__controls row">
+              <div class="screen-header__button-icon-wrapper row">
+                <a href="#" class="screen-header__button-icon screen-header__button-icon--add">
+                  <svg width="28" height="28" aria-hidden="true" focusable="false">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg>
+                  Добавить
+                </a>
+                <a href="#" class="screen-header__button-icon screen-header__button-icon--settings">
+                  <svg width="32" height="32" aria-hidden="true" focusable="false">
+                    <use xlink:href="#icon-gear"></use>
+                  </svg>
+                  Настройки
+                </a>
+              </div>
             </div>
           </header>
 
@@ -95,26 +97,30 @@
                   <h3 class="text--h3 margin-reset">Отчёты и статистика</h3>
                   <div class="widget-report__content-wrapper row">
                     <table>
-                      <tr>
-                        <th>2020 год</th>
-                        <th>2019 год</th>
-                        <th>2018 год</th>
-                      </tr>
-                      <tr>
-                        <td>123 000 000</td>
-                        <td>90 568 666</td>
-                        <td>200 568 666</td>
-                      </tr>
-                      <tr>
-                        <td>123 587 569</td>
-                        <td>123 587 569</td>
-                        <td>123 587 569</td>
-                      </tr>
-                      <tr>
-                        <td>258 654 588</td>
-                        <td>258 654 588</td>
-                        <td>258 654 588</td>
-                      </tr>
+                      <thead>
+                        <tr>
+                          <th>2020 год</th>
+                          <th>2019 год</th>
+                          <th>2018 год</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>123 000 000</td>
+                          <td>90 568 666</td>
+                          <td>200 568 666</td>
+                        </tr>
+                        <tr>
+                          <td>123 587 569</td>
+                          <td>123 587 569</td>
+                          <td>123 587 569</td>
+                        </tr>
+                        <tr>
+                          <td>258 654 588</td>
+                          <td>258 654 588</td>
+                          <td>258 654 588</td>
+                        </tr>
+                      </tbody>
                     </table>
 
                     <img src="../img/svg/barchart.svg" alt="Гистограмма" width="166" height="184">

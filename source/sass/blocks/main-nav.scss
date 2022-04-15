@@ -6,6 +6,9 @@
   width: 100%;
   max-width: 241px;
 
+  // height: 1px;
+  min-height: 100vh;
+
   position: relative;
 
   &__wrapper {
@@ -14,6 +17,9 @@
 
     width: 100%;
     max-width: 241px;
+
+    // height: 1px;
+    // min-height: 100vh;
 
     padding-top: 31px;
     padding-left: 16px;

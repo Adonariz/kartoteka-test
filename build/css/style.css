@@ -589,7 +589,6 @@ button,
   flex-direction: row;
   min-height: 100vh;
   /* stylelint-disable-next-line */
-  min-height: calc(100 * var(--vh, 1vh));
 }
 
 .wrapper main {
@@ -710,6 +709,7 @@ button,
   flex-grow: 1;
   width: 100%;
   max-width: 241px;
+  min-height: 100vh;
   position: relative;
 }
 
@@ -863,7 +863,6 @@ button,
 }
 
 .screen-header__title-wrapper {
-  margin-right: auto;
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
@@ -884,13 +883,25 @@ button,
   margin-left: 1.1em;
 }
 
+.screen-header__controls {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
 .screen-header__search-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  width: 100%;
   max-width: 465px;
   height: 100%;
   position: relative;
@@ -1121,12 +1132,15 @@ button,
 }
 
 .widget-report__content-wrapper table th {
+  height: 39px;
   font-weight: 400;
   padding-left: 0.8em;
+  text-align: left;
 }
 
 .widget-report__content-wrapper table tr td {
-  padding-left: 9px;
+  height: 39px;
+  padding-left: 0.8em;
   border: 1px solid #1f2339;
 }
 
@@ -1602,18 +1616,26 @@ button,
   appearance: none;
 }
 
+.review-form select::-ms-expand {
+  display: none;
+}
+
 .review-form select option {
   padding: 0;
 }
 
 .review-form__submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 1em;
-  margin-left: auto;
-  margin-right: auto;
+  -ms-flex-item-align: center;
+  align-self: center;
   cursor: pointer;
 }
 
 .organisations-table {
+  height: 100%;
   max-height: 785px;
   margin-top: 13px;
 }
@@ -1687,23 +1709,27 @@ button,
   width: 100%;
 }
 
-.organisations-table table col#company {
+.organisations-table table col#company,
+.organisations-table table th:first-child {
   width: 226px;
 }
 
-.organisations-table table col#inn {
+.organisations-table table col#inn,
+.organisations-table table th:nth-child(2) {
   width: 128px;
 }
 
-.organisations-table table col#executive {
+.organisations-table table col#executive,
+.organisations-table table th:nth-child(3) {
   width: 242px;
 }
 
-.organisations-table table col#address {
+.organisations-table table col#address,
+.organisations-table table th:nth-child(4) {
   width: 401px;
 }
 
-.organisations-table table col#edit {
+.organisations-table table#edit {
   width: 43px;
 }
 
@@ -1711,27 +1737,12 @@ button,
   font-size: 14px;
   line-height: 19px;
   font-weight: 700;
+  text-align: left;
   padding-bottom: 14px;
 }
 
 .organisations-table table th:not(:first-child) {
   padding-left: 28px;
-}
-
-.organisations-table table th:first-child {
-  width: 226px;
-}
-
-.organisations-table table th:nth-child(2) {
-  width: 128px;
-}
-
-.organisations-table table th:nth-child(3) {
-  width: 242px;
-}
-
-.organisations-table table th:nth-child(4) {
-  width: 401px;
 }
 
 .organisations-table table thead tr {

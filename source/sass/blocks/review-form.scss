@@ -105,15 +105,20 @@
     cursor: pointer;
     appearance: none;
 
+    &::-ms-expand { // убирает стрелку в ie
+      display: none;
+    }
+
     & option {
       padding: 0;
     }
   }
 
   &__submit {
+    display: flex;
     margin-top: 1em;
-    margin-left: auto;
-    margin-right: auto;
+
+    align-self: center;
 
     cursor: pointer;
   }
