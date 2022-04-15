@@ -1,0 +1,20 @@
+.table-scroll {
+  &__body {
+    width: 15px;
+    height: 100%;
+    background-color: $color-blue-zodiac;
+    border-radius: 6px;
+    position: relative;
+  }
+
+  &__scroll-element {
+    width: 11px;
+    height: 35%;
+    padding: 2px;
+    background-color: $color-midnight-express;
+    border-radius: 6px;
+    position: absolute;
+    top: 2px;
+    left: calc(50% - 11px / 2);
+  }
+}

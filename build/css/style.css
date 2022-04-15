@@ -842,7 +842,7 @@ button,
   flex-direction: column;
   width: 100%;
   height: 100%;
-  padding-bottom: 4em;
+  padding-bottom: 1em;
 }
 
 .main-screen__header {
@@ -1611,6 +1611,214 @@ button,
   margin-left: auto;
   margin-right: auto;
   cursor: pointer;
+}
+
+.organisations-table {
+  max-height: 785px;
+  margin-top: 13px;
+}
+
+.organisations-table__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 51px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  position: relative;
+}
+
+.organisations-table__table-wrapper {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.organisations-table__table-wrapper::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.organisations-table__edit {
+  font-size: 0;
+}
+
+.organisations-table__scroll-wrapper {
+  height: 92%;
+  position: absolute;
+  top: 51px;
+  right: 8px;
+}
+
+.organisations-table__status-icon {
+  position: relative;
+}
+
+.organisations-table__status-icon::before {
+  content: "";
+  width: 17px;
+  height: 19px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 13px;
+  left: 0;
+}
+
+.organisations-table__status-icon--low::before {
+  background-image: url("../../img/svg/status-low.svg");
+}
+
+.organisations-table__status-icon--med::before {
+  background-image: url("../../img/svg/status-med.svg");
+}
+
+.organisations-table__status-icon--high::before {
+  background-image: url("../../img/svg/status-high.svg");
+}
+
+.organisations-table table {
+  text-align: left;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.organisations-table table col#company {
+  width: 226px;
+}
+
+.organisations-table table col#inn {
+  width: 128px;
+}
+
+.organisations-table table col#executive {
+  width: 242px;
+}
+
+.organisations-table table col#address {
+  width: 401px;
+}
+
+.organisations-table table col#edit {
+  width: 43px;
+}
+
+.organisations-table table th {
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 700;
+  padding-bottom: 14px;
+}
+
+.organisations-table table th:not(:first-child) {
+  padding-left: 28px;
+}
+
+.organisations-table table th:first-child {
+  width: 226px;
+}
+
+.organisations-table table th:nth-child(2) {
+  width: 128px;
+}
+
+.organisations-table table th:nth-child(3) {
+  width: 242px;
+}
+
+.organisations-table table th:nth-child(4) {
+  width: 401px;
+}
+
+.organisations-table table thead tr {
+  position: absolute;
+  top: 16px;
+  left: 11px;
+}
+
+.organisations-table table td {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #a1a6be;
+  padding-top: 16px;
+  padding-right: 10px;
+  padding-bottom: 16px;
+  padding-left: 10px;
+  border-top: 0.5px solid rgba(0, 0, 0, 0.5);
+}
+
+.organisations-table table td:not(:first-child) {
+  border-left: 0.5px solid rgba(0, 0, 0, 0.5);
+}
+
+.organisations-table table td:first-child {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 15px;
+  text-indent: 26px;
+}
+
+.organisations-table table td:first-child div {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.organisations-table table td:nth-child(2) {
+  text-align: center;
+}
+
+.organisations-table table td:nth-child(3) {
+  padding-left: 30px;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.organisations-table table td:nth-child(4) {
+  padding-left: 30px;
+  padding-right: 1px;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.organisations-table table td:last-child {
+  padding: 0;
+  padding-right: 6px;
+  padding-top: 9px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table-scroll__body {
+  width: 15px;
+  height: 100%;
+  background-color: #3e4459;
+  border-radius: 6px;
+  position: relative;
+}
+
+.table-scroll__scroll-element {
+  width: 11px;
+  height: 35%;
+  padding: 2px;
+  background-color: #1f2339;
+  border-radius: 6px;
+  position: absolute;
+  top: 2px;
+  left: calc(50% - 11px / 2);
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {

@@ -1,0 +1,201 @@
+.organisations-table {
+  max-height: 785px;
+  margin-top: 13px;
+
+  &__wrapper {
+    display: flex;
+
+    padding-top: 51px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+
+    position: relative;
+  }
+
+  &__table-wrapper {
+    overflow-y: scroll;
+
+    scrollbar-width: none; // firefox
+    -ms-overflow-style: none; // ie
+
+    &::-webkit-scrollbar { // safari
+      width: 0;
+      height: 0;
+    }
+  }
+
+  &__edit {
+    font-size: 0;
+  }
+
+  &__scroll-wrapper {
+    height: 92%;
+
+    position: absolute;
+
+    top: 51px;
+    right: 8px;
+  }
+
+  &__status-icon {
+    position: relative;
+
+    &::before {
+      content: "";
+
+      width: 17px;
+      height: 19px;
+
+      background-repeat: no-repeat;
+      background-position: center;
+
+      position: absolute;
+      top: 13px;
+      left: 0;
+    }
+
+    &--low::before {
+      background-image: url("../../img/svg/status-low.svg");
+    }
+
+    &--med::before {
+      background-image: url("../../img/svg/status-med.svg");
+    }
+
+    &--high::before {
+      background-image: url("../../img/svg/status-high.svg");
+    }
+  }
+
+  & table {
+    text-align: left;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+
+    & col {
+      &#company {
+        width: 226px;
+      }
+
+      &#inn {
+        width: 128px;
+      }
+
+      &#executive {
+        width: 242px;
+      }
+
+      &#address {
+        width: 401px;
+      }
+
+      &#edit {
+        width: 43px;
+      }
+    }
+
+    & th {
+      font-size: 14px;
+      line-height: 19px;
+      font-weight: 700;
+
+      padding-bottom: 14px;
+
+      &:not(:first-child) {
+        padding-left: 28px;
+      }
+
+      &:first-child {
+        width: 226px;
+      }
+
+      &:nth-child(2) {
+        width: 128px;
+      }
+
+      &:nth-child(3) {
+        width: 242px;
+      }
+
+      &:nth-child(4) {
+        width: 401px;
+      }
+    }
+
+    & thead tr {
+      position: absolute;
+      top: 16px;
+      left: 11px;
+    }
+
+    & td {
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 400;
+
+      color: $color-mischka;
+
+      padding-top: 16px;
+      padding-right: 10px;
+      padding-bottom: 16px;
+      padding-left: 10px;
+
+      border-top: 0.5px solid rgba($color: $color-default-black, $alpha: 0.5);
+
+      &:not(:first-child) {
+        border-left: 0.5px solid rgba($color: $color-default-black, $alpha: 0.5);
+      }
+
+      &:first-child {
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 15px;
+
+        text-indent: 26px;
+
+        & div {
+          padding-top: 16px;
+          padding-bottom: 16px;
+
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+
+      &:nth-child(2) {
+        text-align: center;
+      }
+
+      &:nth-child(3) {
+        padding-left: 30px;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      &:nth-child(4) {
+        padding-left: 30px;
+        padding-right: 1px;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      &:last-child {
+        padding: 0;
+        padding-right: 6px;
+        padding-top: 9px;
+
+        text-align: center;
+        vertical-align: middle;
+      }
+    }
+  }
+}
