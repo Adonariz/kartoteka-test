@@ -57,15 +57,15 @@
     }
 
     &--low::before {
-      background-image: url("../../img/svg/status-low.svg");
+      background-image: url("../img/svg/status-low.svg");
     }
 
     &--med::before {
-      background-image: url("../../img/svg/status-med.svg");
+      background-image: url("../img/svg/status-med.svg");
     }
 
     &--high::before {
-      background-image: url("../../img/svg/status-high.svg");
+      background-image: url("../img/svg/status-high.svg");
     }
   }
 
