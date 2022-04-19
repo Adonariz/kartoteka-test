@@ -1,14 +1,22 @@
 .wrapper {
   position: relative;
 
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 241px 1fr;
+
   min-height: 100vh;
   /* stylelint-disable-next-line */
   // min-height: calc(100 * var(--vh, 1vh));
 
   main {
     flex-grow: 1;
+
+    grid-column-start: 2;
+    grid-column-end: 2;
+  }
+
+  @include vp-1439 {
+    grid-template-columns: 47px 1fr;
   }
 }
 

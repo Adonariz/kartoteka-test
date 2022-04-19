@@ -3,13 +3,45 @@
   flex-shrink: 0;
   flex-grow: 1;
 
-  width: 100%;
-  max-width: 241px;
+  grid-column-start: 1;
+  grid-column-end: 1;
 
-  // height: 1px;
+  width: 241px;
+
   min-height: 100vh;
 
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  overflow-x: hidden;
+
+  transition: width $trans-default;
+
+  @include vp-1439 {
+    width: 41px;
+
+    &:hover {
+      width: 241px;
+    }
+
+    &:focus-within {
+      width: 241px;
+    }
+
+    &:hover .main-nav__wrapper {
+      padding-left: 16px;
+      padding-right: 10px;
+    }
+
+    &:hover .main-nav__list {
+      & .main-nav__link--active {
+        padding-bottom: 9px;
+        margin-bottom: -9px;
+      }
+    }
+  }
 
   &__wrapper {
     display: flex;
@@ -18,16 +50,16 @@
     width: 100%;
     max-width: 241px;
 
-    // height: 1px;
-    // min-height: 100vh;
-
     padding-top: 31px;
     padding-left: 16px;
     padding-right: 10px;
 
-    position: fixed;
-    top: 0;
-    left: 0;
+    transition: padding $trans-default;
+
+    @include vp-1439 {
+      padding-left: 10px;
+      padding-right: 4px;
+    }
   }
 
   &__user-nav {
@@ -77,6 +109,13 @@
 
       pointer-events: none;
 
+      transition: padding $trans-default, margin $trans-default;
+
+      @include vp-1439 {
+        padding-bottom: 6px;
+        margin-bottom: -6px;
+      }
+
       & svg {
         fill: $color-midnight-express;
       }
@@ -86,6 +125,17 @@
   &__item {
     &:not(:last-of-type) {
       margin-bottom: 1.3em;
+    }
+  }
+
+  &__icon {
+    width: 31px;
+    flex-shrink: 0;
+
+    & svg {
+      fill: $color-default-white;
+
+      transition: fill $trans-default;
     }
   }
 
@@ -116,17 +166,6 @@
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
       /* IE10+ CSS */
       transition: none;
-    }
-  }
-
-  &__icon {
-    width: 31px;
-    flex-shrink: 0;
-
-    & svg {
-      fill: $color-default-white;
-
-      transition: fill $trans-default;
     }
   }
 }
