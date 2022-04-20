@@ -7,6 +7,10 @@
     &:not(:last-child) {
       margin-bottom: 0.7em;
     }
+
+    @include vp-1023 {
+      justify-content: space-between;
+    }
   }
 
   &__date {

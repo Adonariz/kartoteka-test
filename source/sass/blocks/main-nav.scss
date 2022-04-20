@@ -24,7 +24,7 @@
     width: 41px;
   }
 
-  @media (min-width: $vp-1024) {
+  @media (min-width: $vp-1024) and (max-width: $vp-1440) {
     &:hover {
       width: 241px;
     }
@@ -43,7 +43,7 @@
   }
 
   @include vp-1023 {
-    // width: 0;
+    width: 0;
 
     &--is-open {
       width: 241px;

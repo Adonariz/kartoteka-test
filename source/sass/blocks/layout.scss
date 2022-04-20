@@ -10,11 +10,19 @@
     margin: -10px;
   }
 
+  @include vp-949 {
+    margin: -5px;
+  }
+
   &__item {
     margin: 15px;
 
     @include vp-1199 {
       margin: 10px;
+    }
+
+    @include vp-949 {
+      margin: 5px;
     }
   }
 
@@ -28,8 +36,15 @@
       }
 
       @include vp-1199 {
-        width: calc(33.33% - 20px); // маленький виджет занимает треть контейнера за вычетом маргинов
-        max-width: none;
+        width: calc(33.33% - 20px);
+      }
+
+      @include vp-1023 {
+        width: calc(50% - 20px); // малый виджет равен среднему
+      }
+
+      @include vp-949 {
+        width: calc(50% - 10px);
       }
     }
 
@@ -40,20 +55,30 @@
       }
 
       @include vp-1199 {
-        width: calc(50% - 20px); // средний виджет занимает половину контейнера за вычетом маргинов
-        max-width: none;
+        width: calc(50% - 20px);
+      }
+
+      @include vp-949 {
+        width: calc(50% - 10px);
       }
     }
 
     &--lg {
       @include vp-1439 {
-        width: calc(66.66% - 30px); // средний виджет занимает две трети контейнера за вычетом маргинов
+        width: calc(66.66% - 30px); // большой виджет занимает две трети контейнера за вычетом маргинов
         max-width: none;
       }
 
       @include vp-1199 {
-        width: calc(66.66% - 20px); // средний виджет занимает две трети контейнера за вычетом маргинов
-        max-width: none;
+        width: calc(66.66% - 20px);
+      }
+
+      @include vp-1023 {
+        width: calc(100% - 20px); // большой виджет занимает вссю ширину контейнера
+      }
+
+      @include vp-949 {
+        width: calc(100% - 10px);
       }
     }
   }

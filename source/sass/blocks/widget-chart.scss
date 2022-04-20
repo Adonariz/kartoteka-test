@@ -24,8 +24,20 @@
 
       @include vp-1199 {
         width: 65%;
-        height: none;
+        height: auto;
       }
+
+      @include vp-949 {
+        order: -1;
+        width: auto;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: -2.1em;
+      }
+    }
+
+    @include vp-949 {
+      flex-direction: column;
     }
   }
 

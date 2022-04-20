@@ -21,6 +21,10 @@
 
       border-collapse: collapse;
 
+      @include vp-1023 {
+        max-width: 70%;
+      }
+
       & th {
         height: 39px;
         font-weight: 400;

@@ -1,11 +1,12 @@
-import {ScrollLock} from '../utils/scroll-lock';
+// import {ScrollLock} from '../utils/scroll-lock';
 
 function initMobileMenu() {
-  const scrollLock = new ScrollLock();
+  // const scrollLock = new ScrollLock();
   const btnOpen = document.querySelector('.mobile-menu--burger');
   const btnClose = document.querySelector('.mobile-menu--close');
   const mainNav = document.querySelector('.main-nav');
-  const desktopWidth = 1023;
+  const body = document.querySelector('body');
+  const desktopWidth = 1024;
 
   if (window.innerWidth < desktopWidth) {
     mainNav.classList.add('main-nav--is-closed');
@@ -16,8 +17,7 @@ function initMobileMenu() {
       mainNav.classList.remove('main-nav--is-open');
       mainNav.classList.add('main-nav--is-closed');
     } else {
-      mainNav.classList.remove('main-nav--is-open');
-      mainNav.classList.remove('main-nav--is-closed');
+      mainNav.classList.remove('main-nav--is-open', 'main-nav--is-closed');
     }
   });
 
@@ -26,7 +26,8 @@ function initMobileMenu() {
       if (!mainNav.classList.contains('main-nav--is-open') || mainNav.classList.contains('main-nav--is-closed')) {
         mainNav.classList.remove('main-nav--is-closed');
         mainNav.classList.add('main-nav--is-open');
-        scrollLock.disableScrolling();
+        body.classList.add('.scroll-lock', 'scroll-lock-ios');
+        // scrollLock.disableScrolling();
       }
     });
   }
@@ -36,7 +37,8 @@ function initMobileMenu() {
       if (mainNav.classList.contains('main-nav--is-open')) {
         mainNav.classList.remove('main-nav--is-open');
         mainNav.classList.add('main-nav--is-closed');
-        scrollLock.enableScrolling();
+        body.classList.remove('.scroll-lock', 'scroll-lock-ios');
+        // scrollLock.enableScrolling();
       }
     });
   }
