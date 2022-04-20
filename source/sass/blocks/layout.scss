@@ -1,26 +1,70 @@
 .layout {
-  &__row {
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 
-    &:not(:last-of-type) {
-      margin-bottom: 30px;
+  box-sizing: border-box;
+
+  margin: -15px; // компенсация маргинов потомков
+
+  @include vp-1199 {
+    margin: -10px;
+  }
+
+  &__item {
+    margin: 15px;
+
+    @include vp-1199 {
+      margin: 10px;
+    }
+  }
+
+  & .widget {
+    // calc адаптирован по ie
+
+    &--sm {
+      @include vp-1439 {
+        flex-basis: calc(33.33% - 30px); // маленький виджет занимает треть контейнера за вычетом маргинов
+        max-width: none;
+      }
     }
 
-    .layout__item {
-      &:not(:last-of-type) {
-        margin-right: 30px;
+    &--m {
+      @include vp-1439 {
+        flex-basis: calc(50% - 30px); // средний виджет занимает половину контейнера за вычетом маргинов
+        max-width: none;
+      }
+    }
+
+    &--lg {
+      @include vp-1439 {
+        flex-basis: calc(66.66% - 30px); // средний виджет занимает две трети контейнера за вычетом маргинов
+        max-width: none;
       }
     }
   }
 
-  &__column {
-    width: 100%;
+  // &__row {
+  //   width: 100%;
 
-    .layout__item {
-      &:not(:last-of-type) {
-        margin-right: 0;
-        margin-bottom: 30px;
-      }
-    }
-  }
+  //   &:not(:last-of-type) {
+  //     margin-bottom: 30px;
+  //   }
+
+  //   .layout__item {
+  //     &:not(:last-of-type) {
+  //       margin-right: 30px;
+  //     }
+  //   }
+  // }
+
+  // &__column {
+  //   width: 100%;
+
+  //   .layout__item {
+  //     &:not(:last-of-type) {
+  //       margin-right: 0;
+  //       margin-bottom: 30px;
+  //     }
+  //   }
+  // }
 }

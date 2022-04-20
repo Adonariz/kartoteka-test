@@ -8,6 +8,8 @@
   }
 
   &__content-wrapper {
+    display: flex;
+
     margin-bottom: -20px;
 
     & img {
@@ -17,7 +19,17 @@
       margin-top: -3.1em;
       margin-left: auto;
       margin-right: -0.8em;
+
+      @include vp-1199 {
+        width: 65%;
+        height: none;
+      }
     }
+  }
+
+  &__legend-wrapper {
+    display: flex;
+    flex-direction: column;
   }
 
   &__company {
@@ -25,9 +37,15 @@
     margin-bottom: 1.4em;
   }
 
+  &__list {
+    margin-bottom: 2rem;
+  }
+
   &__list-item {
     padding-left: 2.1em;
     position: relative;
+
+    white-space: nowrap;
 
     &:not(:last-child) {
       margin-bottom: 1.4em;

@@ -7,37 +7,43 @@
 // Desktop first
 
 @mixin vp-1919 {
-  @media (max-width: $vp-1920 - 1) {
+  @media (max-width: ($vp-1920 - 1)) {
     @content;
   }
 }
 
 @mixin vp-1439 {
-  @media (max-width: $vp-1440 - 1) {
+  @media (max-width: ($vp-1440 - 1)) {
     @content;
   }
 }
 
 @mixin vp-1279 {
-  @media (max-width: $vp-1280 - 1) {
+  @media (max-width: ($vp-1280 - 1)) {
+    @content;
+  }
+}
+
+@mixin vp-1199 {
+  @media (max-width: ($vp-1200 - 1)) {
     @content;
   }
 }
 
 @mixin vp-1023 {
-  @media (max-width: $vp-1024 - 1) {
+  @media (max-width: ($vp-1024 - 1)) {
     @content;
   }
 }
 
 @mixin vp-767 {
-  @media (max-width: $vp-768 - 1) {
+  @media (max-width: ($vp-768 - 1)) {
     @content;
   }
 }
 
 @mixin vp-374 {
-  @media (max-width: $vp-375 - 1) {
+  @media (max-width: ($vp-375 - 1)) {
     @content;
   }
 }

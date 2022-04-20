@@ -1,11 +1,19 @@
 .container {
   width: 100%;
-  max-width: 1080px;
+  max-width: 1160px;
 
   margin: 0;
 
-  box-sizing: content-box;
-
   padding-left: 40px;
   padding-right: 40px;
+
+  @include vp-1439 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @include vp-1199 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
