@@ -13,10 +13,20 @@
 
     grid-column-start: 2;
     grid-column-end: 2;
+
+    @include vp-1023 {
+      grid-column: 1;
+      grid-row: 2;
+    }
   }
 
   @include vp-1439 {
     grid-template-columns: 41px 1fr;
+  }
+
+  @include vp-1023 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto;
   }
 }
 
@@ -35,6 +45,25 @@
 
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
+}
+
+.scroll-lock-ios {
+  position: fixed;
+
+  overflow: hidden;
+}
+
+.scroll-lock {
+  overflow: hidden;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .text {

@@ -16,17 +16,16 @@
   z-index: 1;
 
   overflow-x: hidden;
+  overflow-y: scroll;
 
   transition: width $trans-default;
 
   @include vp-1439 {
     width: 41px;
+  }
 
+  @media (min-width: $vp-1024) {
     &:hover {
-      width: 241px;
-    }
-
-    &:focus-within {
       width: 241px;
     }
 
@@ -42,6 +41,20 @@
       }
     }
   }
+
+  @include vp-1023 {
+    // width: 0;
+
+    &--is-open {
+      width: 241px;
+    }
+
+    &--is-closed {
+      width: 0;
+    }
+  }
+
+
 
   &__wrapper {
     display: flex;
@@ -59,6 +72,11 @@
     @include vp-1439 {
       padding-left: 10px;
       padding-right: 4px;
+    }
+
+    @include vp-1023 {
+      padding-left: 16px;
+      padding-right: 10px;
     }
   }
 
@@ -114,6 +132,11 @@
       @include vp-1439 {
         padding-bottom: 6px;
         margin-bottom: -6px;
+      }
+
+      @include vp-1023 {
+        padding-bottom: 9px;
+        margin-bottom: -9px;
       }
 
       & svg {
