@@ -2,8 +2,14 @@
   order: 4;
 
   &__content-wrapper {
+    display: flex;
+
     height: 100%;
     padding-top: 0.6em;
+
+    @include vp-767 {
+      flex-direction: column;
+    }
 
     & table {
       font-size: 14px;
@@ -25,6 +31,12 @@
         max-width: 70%;
       }
 
+      @include vp-767 {
+        max-width: none;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
       & th {
         height: 39px;
         font-weight: 400;
@@ -38,6 +50,10 @@
           padding-left: 0.8em;
 
           border: 1px solid $color-midnight-express;
+
+          @include vp-424 {
+            font-size: 12px;
+          }
         }
 
         & td:first-child {
@@ -58,9 +74,15 @@
       width: 167px;
       height: 184px;
 
-      margin-left: auto;
       margin-top: -2.1em;
       margin-right: 1.6em;
+      margin-left: auto;
+
+      @include vp-767 {
+        margin-top: 1rem;
+        margin-right: auto;
+        margin-left: auto;
+      }
     }
   }
 }

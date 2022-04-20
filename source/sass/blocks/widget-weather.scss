@@ -16,6 +16,10 @@
   &__date {
     margin-bottom: 1.4em;
     margin-right: 2.8em;
+
+    @include vp-767 {
+      margin-right: 0;
+    }
   }
 
   &__temp {
@@ -40,6 +44,10 @@
 
     & span:not(:last-child) {
       margin-bottom: 0.3em;
+    }
+
+    @include vp-767 {
+      margin-right: 0;
     }
   }
 

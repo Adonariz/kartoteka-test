@@ -752,8 +752,9 @@ button,
   width: 100%;
   max-width: 241px;
   padding-top: 31px;
-  padding-left: 16px;
   padding-right: 10px;
+  padding-bottom: 3rem;
+  padding-left: 16px;
   -webkit-transition: padding 0.3s ease;
   -o-transition: padding 0.3s ease;
   transition: padding 0.3s ease;
@@ -1199,6 +1200,9 @@ button,
 }
 
 .widget-report__content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 100%;
   padding-top: 0.6em;
 }
@@ -1244,9 +1248,9 @@ button,
 .widget-report__content-wrapper img {
   width: 167px;
   height: 184px;
-  margin-left: auto;
   margin-top: -2.1em;
   margin-right: 1.6em;
+  margin-left: auto;
 }
 
 .widget-employees {
@@ -1288,6 +1292,7 @@ button,
 
 .widget-employees__list {
   margin-top: 1.7em;
+  margin-bottom: 1.5rem;
 }
 
 .widget-employees__list-item {
@@ -2077,6 +2082,9 @@ button,
   .main-nav__wrapper {
     padding-left: 16px;
     padding-right: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .main-nav__list .main-nav__link--active {
@@ -2149,6 +2157,7 @@ button,
     align-self: center;
     margin-top: auto;
     margin-right: auto;
+    margin-bottom: 1rem;
   }
 
   .widget-pie-chart__content-wrapper {
@@ -2190,6 +2199,59 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .mobile-menu--burger {
+    top: 0.5em;
+    left: 0.5em;
+  }
+
+  .layout .widget--sm {
+    width: calc(100% - 10px);
+  }
+
+  .layout .widget--m {
+    width: calc(100% - 10px);
+  }
+
+  .widget-weather__date {
+    margin-right: 0;
+  }
+
+  .widget-weather__pressure {
+    margin-right: 0;
+  }
+
+  .widget-report__content-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .widget-report__content-wrapper table {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .widget-report__content-wrapper img {
+    margin-top: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 424px) {
+  .widget-report__content-wrapper table tr td {
+    font-size: 12px;
   }
 }
 

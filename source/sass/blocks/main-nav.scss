@@ -54,8 +54,6 @@
     }
   }
 
-
-
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -64,8 +62,9 @@
     max-width: 241px;
 
     padding-top: 31px;
-    padding-left: 16px;
     padding-right: 10px;
+    padding-bottom: 3rem;
+    padding-left: 16px;
 
     transition: padding $trans-default;
 
@@ -77,6 +76,10 @@
     @include vp-1023 {
       padding-left: 16px;
       padding-right: 10px;
+
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
 
