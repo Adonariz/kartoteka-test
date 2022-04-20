@@ -16,6 +16,8 @@
       line-height: 19px;
       font-weight: 400;
 
+      color: $color-default-white;
+
       width: 100%;
       max-width: 374px;
 
@@ -48,6 +50,10 @@
         & td {
           height: 39px;
           padding-left: 0.8em;
+          color: $color-default-white;
+          text-decoration: none;
+
+          pointer-events: none;
 
           border: 1px solid $color-midnight-express;
 

@@ -1175,6 +1175,7 @@ button,
 }
 
 .widget-weather__temp span {
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 36px;
   line-height: 49px;
   padding-top: 0.4em;
@@ -1211,6 +1212,7 @@ button,
   font-size: 14px;
   line-height: 19px;
   font-weight: 400;
+  color: #ffffff;
   width: 100%;
   max-width: 374px;
   margin-left: -0.8em;
@@ -1230,6 +1232,9 @@ button,
 .widget-report__content-wrapper table tr td {
   height: 39px;
   padding-left: 0.8em;
+  color: #ffffff;
+  text-decoration: none;
+  pointer-events: none;
   border: 1px solid #1f2339;
 }
 
