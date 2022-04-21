@@ -32,4 +32,10 @@
 
     background-color: $color-default-white;
   }
+
+  &__button {
+    @include vp-949 {
+      font-size: 12px;
+    }
+  }
 }

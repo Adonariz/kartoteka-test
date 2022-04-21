@@ -74,6 +74,10 @@
 
   &__button {
     margin-left: 25px;
+
+    @include vp-949 {
+      font-size: 12px;
+    }
   }
 
   &__button-icon-wrapper {

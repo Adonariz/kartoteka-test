@@ -2150,6 +2150,10 @@ button,
 }
 
 @media (max-width: 949px) {
+  .screen-header__button {
+    font-size: 12px;
+  }
+
   .layout {
     margin: -5px;
   }
@@ -2225,6 +2229,10 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+
+  .review__button {
+    font-size: 12px;
   }
 }
 
