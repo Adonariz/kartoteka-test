@@ -1,4 +1,14 @@
 .widget-employees {
+  order: 5;
+
+  @include vp-1023 {
+    order: 3;
+  }
+
+  &__employee {
+    margin-right: 1rem;
+  }
+
   &__contacts {
     font-size: 0;
     display: flex;
@@ -24,6 +34,7 @@
 
   &__list {
     margin-top: 1.7em;
+    margin-bottom: 1.5rem;
   }
 
   &__list-item {

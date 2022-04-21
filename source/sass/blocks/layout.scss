@@ -1,26 +1,116 @@
 .layout {
-  &__row {
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 
-    &:not(:last-of-type) {
-      margin-bottom: 30px;
+  box-sizing: border-box;
+
+  margin: -15px; // компенсация маргинов потомков
+
+  @include vp-1199 {
+    margin: -10px;
+  }
+
+  @include vp-949 {
+    margin: -5px;
+  }
+
+  &__item {
+    margin: 15px;
+
+    @include vp-1199 {
+      margin: 10px;
     }
 
-    .layout__item {
-      &:not(:last-of-type) {
-        margin-right: 30px;
+    @include vp-949 {
+      margin: 5px;
+    }
+  }
+
+  & .widget {
+    // calc адаптирован по ie
+
+    &--sm {
+      @include vp-1439 {
+        width: calc(33.33% - 30px); // маленький виджет занимает треть контейнера за вычетом маргинов
+        max-width: none;
+      }
+
+      @include vp-1199 {
+        width: calc(33.33% - 20px);
+      }
+
+      @include vp-1023 {
+        width: calc(50% - 20px); // малый виджет равен среднему
+      }
+
+      @include vp-949 {
+        width: calc(50% - 10px);
+      }
+
+      @include vp-767 {
+        width: calc(100% - 10px);
+      }
+    }
+
+    &--m {
+      @include vp-1439 {
+        width: calc(50% - 30px); // средний виджет занимает половину контейнера за вычетом маргинов
+        max-width: none;
+      }
+
+      @include vp-1199 {
+        width: calc(50% - 20px);
+      }
+
+      @include vp-949 {
+        width: calc(50% - 10px);
+      }
+
+      @include vp-767 {
+        width: calc(100% - 10px);
+      }
+    }
+
+    &--lg {
+      @include vp-1439 {
+        width: calc(66.66% - 30px); // большой виджет занимает две трети контейнера за вычетом маргинов
+        max-width: none;
+      }
+
+      @include vp-1199 {
+        width: calc(66.66% - 20px);
+      }
+
+      @include vp-1023 {
+        width: calc(100% - 20px); // большой виджет занимает всю ширину контейнера
+      }
+
+      @include vp-949 {
+        width: calc(100% - 10px);
       }
     }
   }
 
   &__column {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
 
-    .layout__item {
-      &:not(:last-of-type) {
-        margin-right: 0;
-        margin-bottom: 30px;
+    width: 50%;
+
+    & .widget {
+      width: calc(100% - 30px); // на всю ширину контейнера с компенсацией маргинов
+
+      @include vp-1199 {
+        width: calc(100% - 20px);
       }
+
+      @include vp-949 {
+        width: calc(100% - 10px);
+      }
+    }
+
+    @include vp-767 {
+      width: 100%;
     }
   }
 }

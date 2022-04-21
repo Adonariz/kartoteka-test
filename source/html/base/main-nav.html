@@ -1,5 +1,10 @@
-<nav class="main-nav">
+<nav class="main-nav no-scrollbar">
   <div class="main-nav__wrapper">
+    <button class="mobile-menu mobile-menu--close" aria-label="закрыть навигуцию">
+      <svg width="17" height="17" aria-hidden="true" focusable="false">
+        <use xlink:href="#icon-close"></use>
+      </svg>
+    </button>
     <div class="main-nav__user-nav">
       <a class="main-nav__link @@if (context.index) { main-nav__link--active }" @@if (!context.index) { href="index.html" }>
         <span class="main-nav__icon">

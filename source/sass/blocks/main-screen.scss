@@ -10,5 +10,10 @@
   &__header {
     padding-top: 3.4em;
     padding-bottom: 2.7em;
+
+    @include vp-1439 {
+      padding-top: 2em;
+      padding-bottom: 2em;
+    }
   }
 }

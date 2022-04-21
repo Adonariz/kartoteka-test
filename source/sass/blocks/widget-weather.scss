@@ -1,15 +1,25 @@
 .widget-weather {
+  order: 3;
+
   &__row {
     align-items: flex-end;
 
     &:not(:last-child) {
       margin-bottom: 0.7em;
     }
+
+    @include vp-1023 {
+      justify-content: space-between;
+    }
   }
 
   &__date {
     margin-bottom: 1.4em;
     margin-right: 2.8em;
+
+    @include vp-767 {
+      margin-right: 0;
+    }
   }
 
   &__temp {
@@ -21,6 +31,8 @@
     display: flex;
 
     & span {
+      font-family: $ff-open-sans;
+
       font-size: 36px;
       line-height: 49px;
 
@@ -34,6 +46,10 @@
 
     & span:not(:last-child) {
       margin-bottom: 0.3em;
+    }
+
+    @include vp-767 {
+      margin-right: 0;
     }
   }
 

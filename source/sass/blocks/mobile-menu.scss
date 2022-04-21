@@ -1,0 +1,42 @@
+.mobile-menu {
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border: none;
+  background: none;
+
+  cursor: pointer;
+
+  position: absolute;
+
+  &--burger {
+    background-color: $color-midnight-express;
+    border-radius: 50%;
+
+    top: 1em;
+    left: 1em;
+
+    @include vp-767 {
+      top: 0.5em;
+      left: 0.5em;
+    }
+  }
+
+  &--close {
+    top: 0;
+    right: 0;
+
+    & svg {
+      fill: $color-default-white;
+    }
+  }
+
+  @include vp-1023 {
+    display: flex;
+  }
+}
