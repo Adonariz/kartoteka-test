@@ -1053,7 +1053,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: calc(50%);
+  width: 50%;
 }
 
 .layout__column .widget {
@@ -2177,6 +2177,14 @@ button,
     align-items: flex-start;
   }
 
+  .screen-header--button .screen-header__title-wrapper h2 {
+    margin-right: 0;
+  }
+
+  .screen-header--button .screen-header__title-wrapper span {
+    display: block;
+  }
+
   .layout {
     margin: -5px;
   }
@@ -2259,6 +2267,12 @@ button,
   }
 }
 
+@media (max-width: 949px) and (max-width: 767px) {
+  .screen-header--button .screen-header__title-wrapper span {
+    margin-bottom: 0.5rem;
+  }
+}
+
 @media (max-width: 767px) {
   .container {
     padding-left: 10px;
@@ -2272,25 +2286,42 @@ button,
 
   .screen-header--button .screen-header__title-wrapper {
     -ms-grid-column: 1;
-    grid-column: 1;
+    grid-column-start: 1;
+    -ms-grid-column-span: 1;
+    grid-column-end: 2;
     -ms-grid-row: 1;
-    grid-row: 1;
+    grid-row-start: 1;
+    -ms-grid-row-span: 1;
+    grid-row-end: 2;
   }
 
   .screen-header--button .screen-header__button-icon-wrapper {
+    margin-left: 0;
     -ms-grid-column: 2;
-    grid-column: 2;
+    grid-column-start: 2;
+    -ms-grid-column-span: 1;
+    grid-column-end: 3;
     -ms-grid-row: 1;
-    grid-row: 1;
+    grid-row-start: 1;
+    -ms-grid-row-span: 1;
+    grid-row-end: 2;
     -ms-grid-row-align: start;
     align-self: start;
   }
 
   .screen-header--button .screen-header__button {
-    grid-column: 1 / -1;
-    -ms-grid-row: 3;
-    grid-row: 3;
+    display: block;
+    margin-left: 0;
+    white-space: nowrap;
     margin-left: auto;
+    -ms-grid-column: 1;
+    grid-column-start: 1;
+    -ms-grid-column-span: 2;
+    grid-column-end: 3;
+    -ms-grid-row: 3;
+    grid-row-start: 3;
+    -ms-grid-row-span: 1;
+    grid-row-end: 4;
   }
 
   .screen-header--button {
@@ -2300,7 +2331,8 @@ button,
     -ms-grid-columns: 1fr min-content;
     grid-template-columns: 1fr -webkit-min-content;
     grid-template-columns: 1fr min-content;
-    grid-auto-rows: auto 0.75em auto;
+    grid-auto-rows: -webkit-min-content 0.5em -webkit-min-content;
+    grid-auto-rows: min-content 0.5em min-content;
   }
 
   .layout .widget--sm {
@@ -2309,6 +2341,10 @@ button,
 
   .layout .widget--m {
     width: calc(100% - 10px);
+  }
+
+  .layout__column {
+    width: 100%;
   }
 
   .widget-weather__date {
@@ -2346,6 +2382,18 @@ button,
 
   .widget-report__content-wrapper table tr td {
     font-size: 12px;
+  }
+
+  .review__text {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .review__button {
+    font-size: 10px;
+    line-height: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
