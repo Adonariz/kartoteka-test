@@ -1042,6 +1042,21 @@ button,
   margin: 15px;
 }
 
+.layout__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: calc(50%);
+}
+
+.layout__column .widget {
+  width: calc(100% - 30px);
+}
+
 .button {
   padding: 0.44em 1.9em;
   font-size: 16px;
@@ -1079,9 +1094,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: 100%;
@@ -1503,6 +1515,7 @@ button,
 .company-structure__header {
   cursor: pointer;
   position: relative;
+  padding-right: 1.5rem;
 }
 
 .company-structure__header svg {
@@ -2051,6 +2064,10 @@ button,
     width: calc(66.66% - 20px);
   }
 
+  .layout__column .widget {
+    width: calc(100% - 20px);
+  }
+
   .widget-chart__content-wrapper img {
     width: 65%;
     height: auto;
@@ -2150,6 +2167,10 @@ button,
   }
 
   .layout .widget--lg {
+    width: calc(100% - 10px);
+  }
+
+  .layout__column .widget {
     width: calc(100% - 10px);
   }
 
